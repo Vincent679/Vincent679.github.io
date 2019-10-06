@@ -1,13 +1,12 @@
-$(document).ready(function(){
-    $('.move__carousel').slick({
-        centerMode: true,
-        // centerPadding: '60px',
-        slidesToShow: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        dots: true,
-        infinite: true,
-        speed: 300,
-        variableWidth: true
+$(document).ready( function() {
+    $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+        var divam = 20;
+        $("body").css({
+            "background-position":"0px -"+scrollTop/divam+"px"   
+        });
+        
     });
-  });
+});
+   
+  
